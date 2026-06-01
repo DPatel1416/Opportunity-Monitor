@@ -10,8 +10,8 @@ import requests
 # Import time to create delays between checks
 import time
 
-# Amazon Ottawa jobs page being monitored
-URL = "https://hiring.amazon.ca/app#/jobSearch?query=&postal=k2b7s9&locale=en-CA"
+#Target page being monitored
+URL = ""
 
 # Time interval (in seconds) between each website check
 CHECK_EVERY_SECONDS = 30
@@ -26,10 +26,7 @@ def send_discord_alert():
     """
 
     message = f"""
-🚨 **AMAZON OTTAWA JOB DETECTED**
-
-📍 Location: Ottawa area
-🔎 Source: Amazon Hiring
+Detected
 ⏰ Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 Apply/check here:
@@ -44,7 +41,7 @@ Apply/check here:
 
 def check_page(page):
     """
-    Opens the Amazon jobs page and analyzes its content.
+    Opens the page and analyzes its content.
 
     Returns:
         True  -> Potential job posting detected
@@ -78,9 +75,6 @@ def check_page(page):
     job_keywords = [
         "fulfillment center",
         "warehouse associate",
-        "sortation center",
-        "delivery station",
-        "amazon fulfillment",
         "hourly opportunities"
     ]
 
@@ -97,8 +91,8 @@ def main():
     """
     Main monitoring loop.
 
-    Continuously checks the Amazon jobs page and sends
-    a Discord alert when a job is detected.
+    Continuously checks the page and sends
+    a Discord alert when a required results is detected.
     """
 
     # Prevents duplicate alerts for the same posting
