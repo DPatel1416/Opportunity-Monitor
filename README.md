@@ -1,13 +1,11 @@
 # Opportunity-Monitor
-# Amazon Opportunity Monitor
-
 ## Overview
 
-Amazon Opportunity Monitor is a Python-based web monitoring application designed to help users quickly identify new job opportunities posted on Amazon's hiring website.
+Opportunity Monitor is a Python-based web monitoring application designed to help users quickly identify new job opportunities posted on Hiring website and website where user has to constantly refresh page to pick shifts.
 
-The application continuously monitors a specified Amazon hiring page, analyzes the page content, and sends real-time Discord notifications when potential job postings are detected.
+The application continuously monitors a specified URL, analyzes the page content, and sends real-time Discord notifications when potential job postings are detected.
 
-This project was originally developed to help a friend secure a job by providing near real-time alerts whenever new opportunities became available.
+This project was originally developed to help a friend monitor online employment opportunities and available work shifts in real time, providing instant notifications whenever new opportunities became available.
 
 ---
 
@@ -35,7 +33,7 @@ This project was originally developed to help a friend secure a job by providing
 
 ## How It Works
 
-1. The application opens the target Amazon hiring webpage.
+1. The application opens the target webpage.
 2. Every 30 seconds, it retrieves and analyzes the page content.
 3. If job-related keywords are detected, a Discord notification is sent.
 4. Duplicate alerts are prevented using an internal alert state.
@@ -61,8 +59,8 @@ OpportunityMonitor/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/amazon-opportunity-monitor.git
-cd amazon-opportunity-monitor
+git clone https://github.com/yourusername/opportunity-monitor.git
+cd opportunity-monitor
 ```
 
 ### Create a virtual environment
@@ -115,9 +113,6 @@ This project was created as a learning exercise to gain practical experience wit
 - Real-time monitoring systems
 - API integrations
 - Python development
-
-It was also developed to help a friend stay informed about newly posted job opportunities as quickly as possible.
-
 ---
 
 ## Author
